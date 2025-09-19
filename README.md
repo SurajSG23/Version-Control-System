@@ -23,22 +23,6 @@ It allows developers to keep a local copy of the project and sync with a remote 
 - Tracks changes efficiently
 - Works offline
 
-### Common Git Commands
-| Command | Description |
-|---------|-------------|
-| `git init` | Initialize a new Git repository |
-| `git clone <url>` | Clone a remote repository |
-| `git status` | Check current repo status |
-| `git add <file>` | Stage changes for commit |
-| `git commit -m "msg"` | Save changes to repo |
-| `git log` | View commit history |
-| `git branch` | List branches |
-| `git checkout -b <branch>` | Create & switch to a new branch |
-| `git merge <branch>` | Merge branch into current branch |
-| `git push` | Upload commits to remote |
-| `git pull` | Fetch + merge from remote |
-| `git remote -v` | Show remote URLs |
-
 ---
 
 ## GitHub
@@ -54,31 +38,6 @@ It provides collaboration features and project management tools.
 
 ---
 
-## Git vs GitHub
-| Feature | Git | GitHub |
-|---------|-----|--------|
-| Type | Tool (VCS) | Hosting platform |
-| Use | Local version control | Remote collaboration |
-| Offline support | ✅ Yes | ❌ No (requires internet) |
-| Ownership | Open-source | Owned by Microsoft |
-
----
-
-## Workflow Example
-1. Create repo on GitHub  
-2. Clone it locally → `git clone <url>`  
-3. Make changes  
-4. Stage files → `git add .`  
-5. Commit → `git commit -m "Added feature"`  
-6. Push → `git push origin main`  
-7. Create Pull Request on GitHub (if working in team)  
-
----
-
-## Summary
-- **VCS** = Tracks changes  
-- **Git** = Tool (local VCS)  
-- **GitHub** = Online hosting + collaboration  
-
----
 *With Git + GitHub, developers can build, track, and collaborate efficiently on any project.*
+
+---
