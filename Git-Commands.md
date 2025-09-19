@@ -55,7 +55,7 @@ git push
 ---
 
 
-# Git Commands to Pull Code from GitHub
+# Git Commands to Pull Code
 
 ## 1. Clone Repository (first time only)
 ```bash
