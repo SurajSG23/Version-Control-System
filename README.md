@@ -1,10 +1,10 @@
-# 📌 Version Control System (VCS) – Git & GitHub Notes
+# Version Control System (VCS) – Git & GitHub Notes
 
-## 🚀 What is Version Control System (VCS)?
+## What is Version Control System (VCS)?
 A **Version Control System** is a tool that helps track changes to files (especially code) over time.  
 It allows multiple developers to work together without overwriting each other’s work.  
 
-### ✅ Benefits:
+### Benefits:
 - Tracks history of changes
 - Supports collaboration
 - Allows rollback to previous versions
@@ -13,17 +13,17 @@ It allows multiple developers to work together without overwriting each other’
 
 ---
 
-## 🖥️ Git
+## Git
 **Git** is a distributed version control system created by Linus Torvalds (2005).  
 It allows developers to keep a local copy of the project and sync with a remote repository.
 
-### 🔑 Key Features:
+### Key Features:
 - Distributed (every developer has a full copy of repo)
 - Lightweight branching & merging
 - Tracks changes efficiently
 - Works offline
 
-### ⚡ Common Git Commands
+### Common Git Commands
 | Command | Description |
 |---------|-------------|
 | `git init` | Initialize a new Git repository |
@@ -41,11 +41,11 @@ It allows developers to keep a local copy of the project and sync with a remote 
 
 ---
 
-## 🌍 GitHub
+## GitHub
 **GitHub** is a cloud-based hosting service for Git repositories.  
 It provides collaboration features and project management tools.
 
-### 🔑 Key Features:
+### Key Features:
 - Host Git repositories online
 - Collaborate with teams
 - Pull requests (PRs) & code reviews
@@ -54,7 +54,7 @@ It provides collaboration features and project management tools.
 
 ---
 
-## 🔄 Git vs GitHub
+## Git vs GitHub
 | Feature | Git | GitHub |
 |---------|-----|--------|
 | Type | Tool (VCS) | Hosting platform |
@@ -64,7 +64,7 @@ It provides collaboration features and project management tools.
 
 ---
 
-## 📚 Workflow Example
+## Workflow Example
 1. Create repo on GitHub  
 2. Clone it locally → `git clone <url>`  
 3. Make changes  
@@ -75,10 +75,10 @@ It provides collaboration features and project management tools.
 
 ---
 
-## 📝 Summary
+## Summary
 - **VCS** = Tracks changes  
 - **Git** = Tool (local VCS)  
 - **GitHub** = Online hosting + collaboration  
 
 ---
-👨‍💻 *With Git + GitHub, developers can build, track, and collaborate efficiently on any project.*
+*With Git + GitHub, developers can build, track, and collaborate efficiently on any project.*
