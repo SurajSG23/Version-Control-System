@@ -121,7 +121,7 @@ git merge --abort
 
 ---
 
-# Git Commands to Restore Code
+# Git Commands to Restore Code (Before Commiting)
 ---
 
 ## 1. **Restore a file to last committed state**
@@ -160,4 +160,151 @@ git restore --source=<commit_hash> <file>
 ```
 
 ---
+# Git Commands to Revert Code (After Commiting)
 
+## Syntax
+
+```bash
+git revert <commit_hash>
+```
+
+```bash
+# To get all previous commit_hash:
+
+git log --oneline
+```
+
+
+1. **Revert a single commit**
+
+```bash
+git revert a1b2c3d
+```
+
+→ Creates a new commit undoing commit `a1b2c3d`.
+
+2. **Revert multiple commits**
+
+```bash
+git revert a1b2c3d..d4e5f6g
+```
+
+→ Reverts a range of commits (exclusive of first, inclusive of last).
+
+3. **Revert last commit**
+
+```bash
+git revert HEAD
+```
+
+4. **Revert but don’t auto-commit (manual edit first)**
+
+```bash
+git revert --no-commit a1b2c3d
+git commit -m "Reverted bad commit"
+```
+---
+
+# Git Commands to Reset Code
+
+
+
+## Syntax
+
+```bash
+git reset [--soft | --mixed | --hard] <commit_hash>
+```
+
+If no mode is given, Git uses `--mixed` by default.
+
+---
+
+## Modes of `git reset`
+
+### 1. **Soft reset (`--soft`)**
+
+* Moves HEAD to target commit.
+* Keeps changes **staged** (in index).
+* Useful if you want to **redo the last commit** but keep changes staged.
+
+```bash
+git reset --soft HEAD~1
+```
+
+Undo last commit, but files remain staged.
+
+---
+
+### 2. **Mixed reset (`--mixed`)** (default)
+
+* Moves HEAD to target commit.
+* Keeps changes in **working directory**, but unstages them.
+* Useful to **rebuild staging area**.
+
+```bash
+git reset HEAD~1
+```
+
+Undo last commit, changes stay in working directory (unstaged).
+
+---
+
+### 3. **Hard reset (`--hard`)**
+
+* Moves HEAD to target commit.
+* Discards **everything** in staging and working directory.
+* Dangerous — permanently deletes uncommitted work.
+
+```bash
+git reset --hard HEAD~1
+```
+
+Completely erases last commit and changes.
+
+---
+
+## Examples
+
+1. **Undo last commit but keep changes staged**
+
+```bash
+git reset --soft HEAD~1
+```
+
+2. **Undo last commit and unstage changes**
+
+```bash
+git reset --mixed HEAD~1
+```
+
+3. **Completely erase last commit**
+
+```bash
+git reset --hard HEAD~1
+```
+
+4. **Reset branch to remote (discard local work)**
+
+```bash
+git fetch origin
+git reset --hard origin/main
+```
+
+---
+
+## When to Use
+
+* **`--soft`** → If you committed too early, want to amend.
+* **`--mixed`** → If you staged wrong files.
+* **`--hard`** → If you want to throw away all local changes.
+
+---
+# Quick Comparison
+
+| Command   | What it affects                             | Rewrites history? | Typical use                   |
+| --------- | ------------------------------------------- | ----------------- | ----------------------------- |
+| `restore` | Working directory / staging                 | ❌ No              | Discard local file changes    |
+| `reset`   | HEAD (branch pointer), staging, working dir | ✅ Yes             | Undo commits (private work)   |
+| `revert`  | Commit history (adds new commit)            | ❌ No              | Undo commits (shared history) |
+
+---
