@@ -121,3 +121,43 @@ git merge --abort
 
 ---
 
+# Git Commands to Restore Code
+---
+
+## 1. **Restore a file to last committed state**
+
+```bash
+git restore <file>
+```
+---
+
+## 2. **Discard all local changes (not staged)**
+
+```bash
+git restore .
+```
+
+or:
+
+```bash
+git checkout -- .
+```
+
+---
+
+## 3. **Unstage a file (but keep changes)**
+
+```bash
+git restore --staged <file>
+```
+
+---
+
+## 4. **Restore file from a specific commit**
+
+```bash
+git restore --source=<commit_hash> <file>
+```
+
+---
+
