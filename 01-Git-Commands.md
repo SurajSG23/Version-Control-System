@@ -308,3 +308,33 @@ git reset --hard origin/main
 | `revert`  | Commit history (adds new commit)            | ❌ No              | Undo commits (shared history) |
 
 ---
+# Git Amend
+
+`git commit --amend` lets you **change your last commit**.
+
+---
+
+### 🔹 You can use it for two things:
+
+1. **Fix the commit message**
+
+   ```bash
+   git commit --amend -m "New better message"
+   ```
+
+   → Updates only the message, keeps the same changes.
+
+2. **Add missed changes to the last commit**
+
+   ```bash
+   git add file_you_forgot.txt
+   git commit --amend
+   ```
+
+   → Now the last commit includes the new file(s).
+---
+
+In simple words:
+**`git commit --amend` = “Let me fix or update my last commit instead of making a new one.”**
+
+---
