@@ -61,6 +61,14 @@ git push
 ```bash
 git clone https://github.com/username/repository.git
 ````
+```bash
+# ( . ) Prevents creating a new folder
+git clone https://github.com/username/repository.git .
+````
+```bash
+# Clone a particular branch
+git clone --branch branch-name https://github.com/username/repository.git 
+````
 
 ## 2. Pull Latest Changes
 
