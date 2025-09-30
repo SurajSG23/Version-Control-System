@@ -346,3 +346,54 @@ In simple words:
 **`git commit --amend` = “Let me fix or update my last commit instead of making a new one.”**
 
 ---
+#  Git Diff Command
+
+`git diff` shows the **changes you made** in your code that are **not yet committed**.
+
+It compares:
+
+* Your **working directory** (your current files)
+  vs
+* The **last saved version** (staging area or last commit).
+
+---
+
+### 🔹 Common Uses
+
+1. See what you changed but haven’t staged yet:
+
+```bash
+git diff
+```
+
+2. See what you staged with `git add` but haven’t committed:
+
+```bash
+git diff --staged
+git diff origin/main # Compares the upstream
+```
+
+3. Compare two commit hashes:
+
+```bash
+git diff commit1 commit2
+```
+
+---
+
+### 🔹 Example Output (simplified)
+
+```
+- console.log("old code")
++ console.log("new code")
+```
+
+* Lines starting with `-` → removed.
+* Lines starting with `+` → added.
+
+---
+
+In short:
+**`git diff` = “Show me what exactly changed in my code.”**
+
+---
