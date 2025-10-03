@@ -1,13 +1,13 @@
-name: Suraj S G
+name: Suraj S G   # The name of your workflow. It will show up in the GitHub Actions tab.
 
-on:
-  push: 
-    branches: [ main ]
+on:               # Defines the event that triggers the workflow
+  push:           # This workflow runs when you push code
+    branches: [ main ]   # Only trigger when pushing to the "main" branch
 
-jobs:
-  demo:
-    runs-on: ubuntu-latest
+jobs:             # A workflow is made up of one or more jobs
+  demo:           # The name of this job (you can give any name here)
+    runs-on: ubuntu-latest   # The job will run on a GitHub-hosted Ubuntu machine
 
-    steps: 
-      - name: Greetings
-        run: echo "Hello From Suraj" 
+    steps:        # A job consists of a sequence of steps
+      - name: Greetings       # A human-readable name for this step
+        run: echo "Hello From Suraj"   # The actual command to run in the terminal
