@@ -1,14 +1,28 @@
 # Schedule GitHub Actions Workflows
-name: Schedule Jobs
+name: Schedule Jobs   # Name of the workflow (will appear in Actions tab)
 
-on:
-  schedule:
-    - cron: "0 0 * * *" 
+on:                   # Define when the workflow will run
+  schedule:           # Use cron syntax to schedule it
+    - cron: "0 0 * * *"   # This means every day at 00:00 UTC (midnight)
+                      # 0 → minute = 0
+                      # 0 → hour = 0 (midnight)
+                      # * → every day of the month
+                      # * → every month
+                      # * → every day of the week
+                     
+jobs:                 # Workflows contain jobs
+  run-script:         # Job name (customizable)
+    runs-on: ubuntu-latest   # Runs on a GitHub-hosted Ubuntu machine
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
+    steps:            # Each job has steps
+      - name: Print Message      # Step name for clarity
+        run: echo "Schedule Workflow Execute"   # Command to run
 
-    steps:
-      - name: Print Message
-        run: echo "Schedule Workflow Execute"
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday=0)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *
