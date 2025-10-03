@@ -42,6 +42,7 @@ It gives you a clean working directory so you can switch branches or pull update
 
   ```bash
   git stash apply
+  git stash apply stash@{0} 
   ```
 * Apply and remove from stash:
 
