@@ -1,0 +1,28 @@
+# GitHub Actions workflow to build a React + Vite app
+name: Build my React Vite App   # The workflow name (shown in Actions tab)
+
+on:                             
+  push:                         # Trigger the workflow on push
+    branches: [ main ]           # Only when code is pushed to 'main' branch
+
+jobs:                           
+  build-react-vite:              # Job name (you can rename this if you like)
+    runs-on: ubuntu-latest       # Run the job on the latest Ubuntu runner
+
+    steps:                      
+      # Step 1: Checkout the code from your repository
+      - uses: actions/checkout@v4.2.2 
+      
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js      
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version: 22.x     # Specify Node.js version (Vite works fine with Node 18+)
+      
+      # Step 3: Install dependencies from package.json
+      - name: Install Dependencies
+        run: npm install
+        
+      # Step 4: Build the Vite React app
+      - name: Build React Vite App
+        run: npm run build       # This runs the 'build' script defined in package.json (Vite's build command)
