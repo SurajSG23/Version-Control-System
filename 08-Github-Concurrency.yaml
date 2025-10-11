@@ -1,0 +1,24 @@
+name: CI Pipeline  # Name of the workflow
+
+on:
+  push:
+    branches: [ main ]  # Run this workflow only when code is pushed to the main branch
+
+# 👇 Concurrency block controls how many workflows can run at the same time
+concurrency:
+  group: deploy         # All runs share the same concurrency group name
+  cancel-in-progress: true     # If a new workflow starts for the same group, cancel the old one.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Run the job on a Linux virtual machine (GitHub runner)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Step 1: Get the latest code from the repo
+
+      - name: Install dependencies
+        run: npm install           # Step 2: Install project dependencies
+
+      - name: Run tests
+        run: npm test              # Step 3: Run your automated tests
