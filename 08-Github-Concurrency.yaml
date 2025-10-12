@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]  # Run this workflow only when code is pushed to the main branch
 
-# 👇 Concurrency block controls how many workflows can run at the same time
+# Concurrency block controls how many workflows can run at the same time
 concurrency:
   group: deploy         # All runs share the same concurrency group name
   cancel-in-progress: true     # If a new workflow starts for the same group, cancel the old one.
