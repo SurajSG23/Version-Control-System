@@ -1,6 +1,5 @@
 # Version Control System (VCS) – Git & GitHub Notes
 
-## What is Version Control System (VCS)?
 A **Version Control System** is a tool that helps track changes to files (especially code) over time.  
 It allows multiple developers to work together without overwriting each other’s work.  
 
